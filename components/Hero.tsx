@@ -5,8 +5,8 @@ import { MessageCircle } from "lucide-react";
 function Hero() {
   return (
     <section className="w-full bg-black text-white pt-16 pb-20 md:pt-20 md:pb-24">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
-        <div className="flex-1 text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 flex flex-col md:flex-row items-center justify-around gap-16">
+        <div className="text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
             Find Your Next Home
             <br />
@@ -14,8 +14,9 @@ function Hero() {
           </h1>
 
           <p className="text-gray-300 mt-5 text-base sm:text-lg md:text-xl max-w-lg mx-auto md:mx-0 leading-relaxed">
-            No apps. No agents stress. Simply chat with our AI-powered agent to
-            find available houses near you — fast, simple, and reliable.
+            No apps. No agents stress. Simply chat with our AI-powered housing
+            agent to find available houses near you — fast, simple, and
+            reliable.
           </p>
 
           <a
@@ -30,7 +31,7 @@ function Hero() {
           </a>
         </div>
 
-        <div className="flex-1 flex justify-center w-full">
+        <div className="flex justify-center">
           <div className="w-full max-w-sm sm:max-w-md bg-[#1a1a1a] rounded-2xl p-5 sm:p-6 shadow-xl border border-[#fa343a25]">
             <p className="text-gray-300 text-xs sm:text-sm">
               Example Conversation
