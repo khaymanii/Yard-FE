@@ -32,8 +32,8 @@
 **Workflow:**
 
 1. Push code to GitHub → triggers **CodePipeline**  
-2. **CodeBuild** packages Lambda (`function.zip`)  
-3. Deploy stage → updates Lambda automatically  
+2. **CodeBuild** packages Lambda into (`.zip`) file. 
+3. Deploy stage → updates Lambda automatically.  
 4. Lambda interacts with WhatsApp and DynamoDB to serve property data  
 
 
