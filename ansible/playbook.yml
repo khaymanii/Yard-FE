@@ -1,0 +1,22 @@
+- hosts: web
+  gather_facts: false
+  become: yes
+
+  tasks:
+    - name: Install Docker
+      raw: yum install -y docker
+
+    - name: Start Docker service
+      raw: systemctl start docker && systemctl enable docker
+
+    - name: Add ec2-user to docker group
+      raw: usermod -aG docker ec2-user
+
+    - name: Pull Docker image
+      raw: docker pull kenneth4/yard-fe:0.3
+
+    - name: Stop old container if it exists
+      raw: docker rm -f yard-fe || true
+
+    - name: Run container
+      raw: docker run -d -p 80:3000 --name yard-fe kenneth4/yard-fe:0.3
