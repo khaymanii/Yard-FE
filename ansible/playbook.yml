@@ -4,7 +4,7 @@
 
   tasks:
     - name: Install Docker
-      raw: yum install -y docker
+      raw: apt-get update && apt-get install -y docker
 
     - name: Start Docker service
       raw: systemctl start docker && systemctl enable docker
